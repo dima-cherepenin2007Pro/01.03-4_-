@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))

@@ -21,11 +21,8 @@ class UserViewModel : ViewModel() {
         )
 
         viewModelScope.launch {
-
             try {
-
                 val result = repository.addUser(user)
-
                 Log.d(
                     "USER",
                     "Пользователь добавлен:\n" +
@@ -35,7 +32,6 @@ class UserViewModel : ViewModel() {
                             "Пол: ${result.gender}\n" +
                             "Адрес: ${result.address.city}, ${result.address.address}"
                 )
-
             } catch (e: Exception) {
 
                 Log.e(

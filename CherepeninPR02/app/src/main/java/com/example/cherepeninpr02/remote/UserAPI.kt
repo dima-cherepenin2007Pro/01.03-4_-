@@ -8,7 +8,5 @@ import retrofit2.http.POST
 
 interface UserApi {
     @POST("users/add")
-    suspend fun addUser(
-        @Body user: CreateUserRequest
-    ): UserResponse
+    suspend fun addUser(@Body user: CreateUserRequest): UserResponse
 }
