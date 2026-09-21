@@ -5,6 +5,6 @@ import com.example.cherepeninpr01.remote.RetrofitInstance
 
 class RecipeRepository {
     suspend fun getRecipes(): List<Recipe> {
-        return RetrofitInstance.api.getRecipes().recipes
+        return RetrofitInstance.api1.getRecipes().recipes
     }
 }

@@ -13,10 +13,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.cherepeninpr01.ui.theme.CherepeninPR01Theme
 import androidx.activity.viewModels
 import com.example.cherepeninpr01.viewmodel.RecipeViewModel
+import com.example.cherepeninpr01.viewmodel.UserViewModel
 
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: RecipeViewModel by viewModels()
+    private val viewModel1: RecipeViewModel by viewModels()
+    private val viewModel2: UserViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +32,8 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        viewModel.loadRecipes()
+        viewModel1.loadRecipes()
+        viewModel2.addUser()
     }
 }
 
