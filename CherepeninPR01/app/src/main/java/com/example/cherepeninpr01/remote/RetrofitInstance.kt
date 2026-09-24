@@ -16,21 +16,18 @@ object RetrofitInstance {
             .proxy(proxy)
             .build()
     }
-
+    private val retrofitClient = Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .client(okHttpClient)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
     val api1: RecipeApi by lazy {
-        Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(RecipeApi::class.java)
+        retrofitClient.create(RecipeApi::class.java)
     }
     val api2: UserApi by lazy {
-        Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(UserApi::class.java)
+        retrofitClient.create(UserApi::class.java)
+    }
+    val api3: ProductAPI by lazy{
+        retrofitClient.create(ProductAPI::class.java)
     }
 }
