@@ -5,6 +5,6 @@ import com.example.cherepeninpr01.model.UserResponse
 
 class UserRepository {
     suspend fun addUser(user: CreateUserRequest): UserResponse {
-        return RetrofitInstance.api2.addUser(user)
+        return RetrofitInstance.apiUser.addUser(user)
     }
 }

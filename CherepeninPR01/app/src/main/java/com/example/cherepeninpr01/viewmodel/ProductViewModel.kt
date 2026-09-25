@@ -11,7 +11,6 @@ import com.example.cherepeninpr01.repository.ProductRepository
 
 class ProductViewModel : ViewModel() {
     private val repository = ProductRepository()
-
     fun changeProduct(){
 
         val product = ChangeProductRequest(
@@ -23,6 +22,25 @@ class ProductViewModel : ViewModel() {
         )
 
         viewModelScope.launch {
+            try{
+                val result = repository.getProduct(48)
+                Log.d(
+                    "PRODUCT",
+                    "Данные о товаре:\n" +
+                            "ID: ${result.id}\n" +
+                            "title: ${result.title}\n" +
+                            "description: ${result.description}\n" +
+                            "category: ${result.category}\n" +
+                            "tags: ${result.tags}\n"
+                )
+            }
+            catch(ex: Exception){
+                Log.e(
+                    "Product",
+                    "Ошибка при получении товара",
+                    ex
+                )
+            }
             try{
                 val result = repository.changeProduct(product)
                 Log.d(

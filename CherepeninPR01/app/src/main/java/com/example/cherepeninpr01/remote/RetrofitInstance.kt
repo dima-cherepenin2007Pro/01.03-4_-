@@ -21,13 +21,13 @@ object RetrofitInstance {
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-    val api1: RecipeApi by lazy {
+    val apiRecipe: RecipeApi by lazy {
         retrofitClient.create(RecipeApi::class.java)
     }
-    val api2: UserApi by lazy {
+    val apiUser: UserApi by lazy {
         retrofitClient.create(UserApi::class.java)
     }
-    val api3: ProductAPI by lazy{
+    val apiProduct: ProductAPI by lazy{
         retrofitClient.create(ProductAPI::class.java)
     }
 }
