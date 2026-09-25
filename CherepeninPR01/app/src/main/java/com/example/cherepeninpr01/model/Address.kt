@@ -1,6 +1,6 @@
 package com.example.cherepeninpr01.model
 
-data class Address(
+data class UserAddress(
     val address: String,
     val city: String
 )

@@ -1,9 +1,9 @@
 package com.example.cherepeninpr01.model
 
-data class UserResponse(
-    val id: Int,
+data class User(
+    val id: Int? = null,
     val firstName: String,
     val lastName: String,
     val gender: String,
-    val address: Address
+    val address: UserAddress
 )

@@ -1,11 +1,11 @@
 package com.example.cherepeninpr01.remote
 
 import com.example.cherepeninpr01.model.CreateUserRequest
-import com.example.cherepeninpr01.model.UserResponse
+import com.example.cherepeninpr01.model.User
 import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface UserApi {
     @POST("users/add")
-    suspend fun addUser(@Body user: CreateUserRequest): UserResponse
+    suspend fun addUser(@Body user: User): User
 }

@@ -18,7 +18,7 @@ class ProductViewModel : ViewModel() {
             title = "Беспроводные наушники SoundWave Pro",
             description = "Наушники с активным шумоподавлением, влагозащитой IPX4 и автономностью до 30 часов работы вместе с кейсом",
             category = "Аудиотехника",
-            tags = listOf("Наушники", "bluetooth", "беспроводные наушники", "гаджеты")
+            tags = listOf("beauty")
         )
 
         viewModelScope.launch {

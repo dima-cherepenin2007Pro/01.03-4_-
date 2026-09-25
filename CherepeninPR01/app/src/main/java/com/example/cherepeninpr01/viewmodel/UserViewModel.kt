@@ -3,9 +3,10 @@ package com.example.cherepeninpr01.viewmodel
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.cherepeninpr01.model.UserAddress
 import kotlinx.coroutines.launch
 import com.example.cherepeninpr01.repository.UserRepository
-import com.example.cherepeninpr01.model.CreateUserRequest
+import com.example.cherepeninpr01.model.User
 
 class UserViewModel : ViewModel() {
 
@@ -13,11 +14,16 @@ class UserViewModel : ViewModel() {
 
     fun addUser() {
 
-        val user = CreateUserRequest(
+        val addr = UserAddress(
+            city = "г. Заволжье",
+            address = "пр-т Мира, 18"
+        )
+
+        val user = User(
             firstName = "Антон",
             lastName = "Кудрин",
-            gender = "male",
-            address = "г. Заволжье, пр-т Мира, 18"
+            gender = "мужской",
+            address = addr
         )
 
         viewModelScope.launch {
@@ -33,7 +39,6 @@ class UserViewModel : ViewModel() {
                             "Адрес: ${result.address.city}, ${result.address.address}"
                 )
             } catch (e: Exception) {
-
                 Log.e(
                     "USER",
                     "Ошибка при добавлении пользователя",

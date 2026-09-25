@@ -1,7 +1,5 @@
 package com.example.cherepeninpr01.remote
 
-import com.example.cherepeninpr01.model.CreateUserRequest
-import com.example.cherepeninpr01.model.UserResponse
 import retrofit2.http.Body
 import retrofit2.http.PUT
 import com.example.cherepeninpr01.model.ChangeProductRequest
