@@ -1,6 +1,6 @@
 package com.example.cherepeninpr01.model
 
-class ProductResponse (
+data class ProductResponse (
     val id: Int,
     val title: String,
     val description: String,

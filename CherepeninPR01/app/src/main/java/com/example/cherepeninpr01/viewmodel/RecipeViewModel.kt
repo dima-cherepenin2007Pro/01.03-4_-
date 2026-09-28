@@ -28,4 +28,21 @@ class RecipeViewModel : ViewModel() {
             }
         }
     }
+
+    fun deleteRecipe(id: Int){
+        viewModelScope.launch {
+            try{
+                val recipe = repository.deleteRecipe(id)
+                Log.d(
+                    "RECIPES",
+                    "Id: ${recipe.id}\n" +
+                            "Название: ${recipe.name}\n" +
+                            "Статус: ${recipe.isDeleted}\n"
+                )
+            }
+            catch(e: Exception){
+                Log.e("RECIPES", "Ошибка при удалении рецепта", e)
+            }
+        }
+    }
 }

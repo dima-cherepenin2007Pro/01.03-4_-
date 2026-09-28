@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
         // viewModelRecipes.loadRecipes()
         // viewModelUsers.addUser()
         viewModelProduct.changeProduct()
+        // viewModelRecipes.deleteRecipe(19)
     }
 }
 

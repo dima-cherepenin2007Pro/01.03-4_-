@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 interface ProductAPI {
     @PUT("products/{id}")
-    suspend fun changeProduct(@Path("id") id: Int, @Body product: ChangeProductRequest): ProductResponse
+    suspend fun changeProduct(@Path("id") id: Int, @Body product: ProductResponse): ProductResponse
 
     @GET("products/{id}")
     suspend fun getProduct(@Path("id") id: Int): ProductResponse

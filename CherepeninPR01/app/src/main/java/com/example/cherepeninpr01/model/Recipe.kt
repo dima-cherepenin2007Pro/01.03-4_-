@@ -4,5 +4,6 @@ class Recipe (
     val id: Int,
     val name: String,
     val ingredients: List<String>,
-    val caloriesPerServing: Int
+    val caloriesPerServing: Int,
+    val isDeleted: Boolean? = false
 )

@@ -8,7 +8,7 @@ class ProductRepository {
     suspend fun getProduct(id: Int): ProductResponse{
         return RetrofitInstance.apiProduct.getProduct(id)
     }
-    suspend fun changeProduct(product: ChangeProductRequest): ProductResponse{
+    suspend fun changeProduct(product: ProductResponse): ProductResponse{
         return RetrofitInstance.apiProduct.changeProduct(product.id, product)
     }
 }
