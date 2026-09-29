@@ -2,7 +2,6 @@ package com.example.cherepeninpr01.remote
 
 import retrofit2.http.Body
 import retrofit2.http.PUT
-import com.example.cherepeninpr01.model.ChangeProductRequest
 import com.example.cherepeninpr01.model.ProductResponse
 import retrofit2.http.Path
 import retrofit2.http.GET

@@ -5,5 +5,5 @@ class Recipe (
     val name: String,
     val ingredients: List<String>,
     val caloriesPerServing: Int,
-    val isDeleted: Boolean? = false
+    val isDeleted: Boolean = false
 )

@@ -1,6 +1,5 @@
 package com.example.cherepeninpr01.repository
 
-import com.example.cherepeninpr01.model.ChangeProductRequest
 import com.example.cherepeninpr01.model.ProductResponse
 import com.example.cherepeninpr01.remote.RetrofitInstance
 

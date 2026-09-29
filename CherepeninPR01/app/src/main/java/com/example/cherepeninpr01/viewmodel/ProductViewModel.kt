@@ -4,7 +4,6 @@ import android.icu.text.ListFormatter
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.cherepeninpr01.model.ChangeProductRequest
 import com.example.cherepeninpr01.model.ProductResponse
 import com.example.cherepeninpr01.model.RecipeResponse
 import com.example.cherepeninpr01.repository.RecipeRepository
