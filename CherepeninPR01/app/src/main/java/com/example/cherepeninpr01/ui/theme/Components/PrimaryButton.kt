@@ -28,7 +28,7 @@ fun PrimaryButton(
         enabled = ifable,
         shape = RoundedCornerShape(10.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = ButtonColor1,
+            containerColor = Color.Black,
             contentColor = Color.White,
             disabledContainerColor = DisButtonColor1,
             disabledContentColor = Color.White
