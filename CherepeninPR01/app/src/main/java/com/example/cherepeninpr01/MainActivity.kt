@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.cherepeninpr01.ui.theme.CherepeninPR01Theme
 import androidx.activity.viewModels
+import com.example.cherepeninpr01.viewmodel.PostsViewModel
 import com.example.cherepeninpr01.viewmodel.RecipeViewModel
 import com.example.cherepeninpr01.viewmodel.UserViewModel
 import com.example.cherepeninpr01.viewmodel.ProductViewModel
@@ -20,6 +21,7 @@ class MainActivity : ComponentActivity() {
     private val viewModelRecipes: RecipeViewModel by viewModels()
     private val viewModelUsers: UserViewModel by viewModels()
     private val viewModelProduct: ProductViewModel by viewModels()
+    private val viewModelPost: PostsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +39,7 @@ class MainActivity : ComponentActivity() {
         // viewModelUsers.addUser()
         // viewModelProduct.changeProduct()
         // viewModelRecipes.deleteRecipe(19)
+        viewModelPost.loadPosts()
     }
 }
 
