@@ -1,5 +1,6 @@
 package com.example.cherepeninpr01.remote
 
+import android.webkit.HttpAuthHandler
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.net.InetSocketAddress
@@ -16,6 +17,7 @@ object RetrofitPosts {
 
     val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
+
     }
     private val okHttpClient: OkHttpClient by lazy {
         OkHttpClient.Builder()

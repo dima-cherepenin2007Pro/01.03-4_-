@@ -5,11 +5,11 @@ import com.example.cherepeninpr01.remote.RetrofitPosts
 import com.example.cherepeninpr01.model.AuthRequest
 
 class PostRepository {
-    suspend fun auth(email: String, password: String): AuthResponse {
-        return RetrofitPosts.apiPost.auth(AuthRequest(identity = email, password = password))
+    suspend fun auth(authData: AuthRequest): AuthResponse {
+        return RetrofitPosts.apiPost.auth(authData)
     }
 
     suspend fun getPosts(token: String): PostsResponse {
-        return RetrofitPosts.apiPost.getPosts()
+        return RetrofitPosts.apiPost.getPosts(token)
     }
 }

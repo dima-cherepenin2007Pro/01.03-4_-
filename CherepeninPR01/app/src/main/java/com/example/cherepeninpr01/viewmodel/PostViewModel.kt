@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.runtime.saveable.autoSaver
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.cherepeninpr01.model.AuthRequest
 import com.example.cherepeninpr01.repository.RecipeRepository
 import kotlinx.coroutines.launch
 import com.example.cherepeninpr01.model.AuthResponse
@@ -18,8 +19,12 @@ class PostsViewModel : ViewModel() {
     fun loadPosts() {
         viewModelScope.launch{
             val authResult: AuthResponse
+            val authData = AuthRequest(
+                identity = email,
+                password = password
+            )
             try {
-                authResult = repository.auth(email, password)
+                authResult = repository.auth(authData)
                 Log.d(
                     "POSTS",
                     "Успешная авторизация:\n" +
@@ -40,7 +45,6 @@ class PostsViewModel : ViewModel() {
                                 "Страница: ${postsResult.page} из ${postsResult.totalPages}\n" +
                                 "На странице: ${postsResult.perPage}"
                     )
-
                     postsResult.items.forEachIndexed { index, post ->
                         Log.d(
                             "POSTS",

@@ -10,4 +10,6 @@ data class UserRecord(
     val email: String,
     val firstName: String?,
     val lastName: String?,
+    val created: String?,
+    val updated: String?
 )
