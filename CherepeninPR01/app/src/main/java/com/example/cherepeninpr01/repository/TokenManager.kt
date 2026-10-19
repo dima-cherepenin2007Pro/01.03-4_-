@@ -27,10 +27,5 @@ class TokenManager(private val context: Context) {
         return context.dataStore.data.map { preferences -> preferences[ACCESS_TOKEN] }
     }
 
-    // удобный хелпер: получить токен один раз (suspend)
     suspend fun getToken(): String? = tokenFlow().first()
-
-    suspend fun clearToken() {
-        context.dataStore.edit { it.remove(ACCESS_TOKEN) }
-    }
 }

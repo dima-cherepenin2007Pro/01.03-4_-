@@ -6,7 +6,7 @@ data class AuthResponse (
 )
 
 data class UserRecord(
-    val id: Int,
+    val id: String,
     val email: String,
     val firstName: String?,
     val lastName: String?,

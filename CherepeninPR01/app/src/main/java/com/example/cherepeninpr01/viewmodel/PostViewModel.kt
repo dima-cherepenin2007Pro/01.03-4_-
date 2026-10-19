@@ -17,7 +17,6 @@ class PostsViewModel(application: Application) : AndroidViewModel(application) {
     private val password = "12345678910"
     private val repository = PostRepository()
 
-    // ← объект прямо во ViewModel
     private val tokenManager = TokenManager(application.applicationContext)
 
     fun loadPosts() {

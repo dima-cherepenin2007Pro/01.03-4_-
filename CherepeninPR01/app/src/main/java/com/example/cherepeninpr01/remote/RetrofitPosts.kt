@@ -22,7 +22,6 @@ object RetrofitPosts {
         OkHttpClient.Builder()
             .proxy(proxy)
             .addInterceptor(loggingInterceptor)
-
             .build()
     }
     private val retrofitClient = Retrofit.Builder()
