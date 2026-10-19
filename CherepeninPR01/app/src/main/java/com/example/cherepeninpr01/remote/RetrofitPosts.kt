@@ -17,12 +17,12 @@ object RetrofitPosts {
 
     val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
-
     }
     private val okHttpClient: OkHttpClient by lazy {
         OkHttpClient.Builder()
             .proxy(proxy)
             .addInterceptor(loggingInterceptor)
+
             .build()
     }
     private val retrofitClient = Retrofit.Builder()
